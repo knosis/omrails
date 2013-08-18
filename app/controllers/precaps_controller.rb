@@ -1,6 +1,12 @@
 class PrecapsController < ApplicationController
+  before_filter :authenticate_user!, except: [:index]
+
+
+
   # GET /precaps
   # GET /precaps.json
+
+  #@precaps = current_user.precaps.all for list of user articles only.
   def index
     @precaps = Precap.all
 
@@ -24,7 +30,7 @@ class PrecapsController < ApplicationController
   # GET /precaps/new
   # GET /precaps/new.json
   def new
-    @precap = Precap.new
+    @precap = current_user.precaps.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +40,13 @@ class PrecapsController < ApplicationController
 
   # GET /precaps/1/edit
   def edit
-    @precap = Precap.find(params[:id])
+    @precap = current_user.precaps.find(params[:id])
   end
 
   # POST /precaps
   # POST /precaps.json
   def create
-    @precap = Precap.new(params[:precap])
+    @precap = current_user.precaps.new(params[:precap])
 
     respond_to do |format|
       if @precap.save
@@ -56,7 +62,7 @@ class PrecapsController < ApplicationController
   # PUT /precaps/1
   # PUT /precaps/1.json
   def update
-    @precap = Precap.find(params[:id])
+    @precap = current_user.precaps.find(params[:id])
 
     respond_to do |format|
       if @precap.update_attributes(params[:precap])
@@ -72,7 +78,7 @@ class PrecapsController < ApplicationController
   # DELETE /precaps/1
   # DELETE /precaps/1.json
   def destroy
-    @precap = Precap.find(params[:id])
+    @precap = current_user.precaps.find(params[:id])
     @precap.destroy
 
     respond_to do |format|

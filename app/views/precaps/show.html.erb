@@ -2,10 +2,14 @@
 	  <div class="span6 offset3">
 	  	<div class="well">
 			<p>
-			  <b>Most important insight <br>from the article:</b>
 			  <%= @precap.description %>
 			</p>
-			<%= link_to 'Edit', edit_precap_path(@precap) %> |
+			<p>
+			  <%= @precap.user.name %>
+			</p>
+			<%= if current_user == @precap.user %>
+				<%= link_to 'Edit', edit_precap_path(@precap) %> |
+			<% end %>
 			<%= link_to 'Back', precaps_path %>
 			</div>
 	</div>

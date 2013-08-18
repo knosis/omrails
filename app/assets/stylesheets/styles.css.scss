@@ -19,10 +19,24 @@
     min-height: 40px;
 }
 
+.navbar .brand {
+  color: #FFF;
+  text-shadow: none;
+}
+
+.navbar-inner .brand a:hover {
+  color: #FFF;
+  text-shadow: none;
+}
+
 .navbar .nav > li > a {
-  color: #FFFFFF;
+  color: #D3D3D3;
   padding: 12px 15px;
   text-shadow: none;
+}
+
+.navbar .nav > li > a:hover {
+	color: #FFF;
 }
 
 .bookmarklet {
