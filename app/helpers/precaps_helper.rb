@@ -1,0 +1,2 @@
+module PrecapsHelper
+end

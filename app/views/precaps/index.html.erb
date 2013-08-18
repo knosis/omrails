@@ -1,0 +1,19 @@
+<h1>Listing precaps</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Articles</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render @precaps %>
+</tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Precap', new_precap_path %>
