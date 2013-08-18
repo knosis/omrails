@@ -1,0 +1,21 @@
+
+@import 'bootstrap';
+
+ body {
+ 	padding-top: 60px;
+ }
+
+@import 'bootstrap-responsive';
+
+.brand {
+	font-family: Georgia;
+	font-style: italic;
+}
+
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a { 
+	  color: $gray;
+	}
+}
