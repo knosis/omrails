@@ -12,6 +12,24 @@
 	font-style: italic;
 }
 
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: 0;
+	background-image: linear-gradient(to bottom, #2A6998, #2A6998);
+    min-height: 40px;
+}
+
+.navbar .nav > li > a {
+    color: #FFFFFF;
+    padding: 12px 15px;
+    text-shadow: none;
+}
+
+.search-query {
+	margin-top: 2px;
+	width: 160px;
+}
+
 .footer {
 	margin-top: 50px;
 	color: $grayLight;
